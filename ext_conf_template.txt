@@ -1,0 +1,25 @@
+############################
+### CUSTOM SUBCATEGORIES ###
+###########################
+
+# customsubcategory=110_secone=SecOne
+# customsubcategory=100_sectwo=SecTwo
+
+# cat=General/110_secone; type=boolean; label=Test 1:Das ist die erste Variable
+var1 = 0
+
+# cat=General/110_secone; type=boolean; label=Test 2:Das ist die zweite Variable
+var2 = 0
+
+# cat=General/110_secone; type=boolean; label=Test 3:Das ist die dritte Variable
+var3 = 0
+
+# cat=General/100_sectwo; type=boolean; label=Test 4:Das ist die vierte Variable
+var4 = 1
+
+
+# cat=basic/enable; type=boolean; label=Variable 1 in basic
+OtherVariable = 0
+
+# cat=basic/enable; type=boolean; label=Variable 2 in basic
+AnotherVariable = 0
