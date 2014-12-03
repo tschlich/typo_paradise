@@ -1,4 +1,18 @@
-<f:format.raw>{mainContent}</f:format.raw>
-<f:format.raw>{subContent}</f:format.raw>
-<f:format.raw>{sidebar}</f:format.raw>
-<f:format.raw>{jumbotron}</f:format.raw>
+<f:layout name="DefaultLayout" />
+<f:section name="content">
+  <div id="main-content">
+    <f:format.raw>{mainContent}</f:format.raw>
+  </div>
+  <div id="sub-content">
+    <f:format.raw>{subContent}</f:format.raw>
+  </div>
+  <aside id="sidebar">
+    <f:format.raw>{sidebar}</f:format.raw>
+  </aside>
+  <div id="jumbotron">
+    <f:format.raw>{jumbotron}</f:format.raw>
+  </div>
+  <div id="meta-page-info">
+    <f:render partial="metaPageInfo" arguments="{pageData : data}" />	
+  </div>
+</f:section>

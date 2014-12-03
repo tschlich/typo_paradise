@@ -11,6 +11,10 @@ page {
     10 = FLUIDTEMPLATE
     10 {
         file = EXT:typo_paradise/Resources/Private/Templates/DefaultTemplate.html
+
+        layoutRootPath = EXT:typo_paradise/Resources/Private/Layouts
+        partialRootPath = EXT:typo_paradise/Resources/Private/Partials
+
         variables {
             mainContent < styles.content.get
             subContent < styles.content.getRight
