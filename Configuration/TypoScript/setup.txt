@@ -1,0 +1,21 @@
+page = PAGE
+page {
+
+    # Page Properties
+    config.doctype = html5
+
+    # Meta Tags
+    meta.author = Thomas Schlich
+    meta.description = TYPO3 6.2 Extension Typo Paradise
+
+    10 = FLUIDTEMPLATE
+    10 {
+        file = EXT:typo_paradise/Resources/Private/Templates/DefaultLayout.html
+        variables {
+            mainContent < styles.content.get
+            subContent < styles.content.getRight
+            sidebar < styles.content.getLeft
+            jumbotron < styles.content.getBorder
+        }
+    }
+}
