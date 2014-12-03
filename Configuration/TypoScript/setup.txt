@@ -10,7 +10,7 @@ page {
 
     10 = FLUIDTEMPLATE
     10 {
-        file = EXT:typo_paradise/Resources/Private/Templates/DefaultLayout.html
+        file = EXT:typo_paradise/Resources/Private/Templates/DefaultTemplate.html
         variables {
             mainContent < styles.content.get
             subContent < styles.content.getRight
