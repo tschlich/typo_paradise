@@ -1,0 +1,18 @@
+{
+  "name": "typo_paradise",
+  "version": "0.0.1",
+  "description": "web packages for TYPO3 6.2 Extension typo_paradise",
+  "main": "../Public/Css/main.css",
+  "authors": [
+    "Thomas Schlich"
+  ],
+  "homepage": "https://github.com/tschlich/typo_paradise",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1"
+  }
+}
