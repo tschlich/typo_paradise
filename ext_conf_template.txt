@@ -1,6 +1,6 @@
+  ############################
+ ### CUSTOM SUBCATEGORIES ###
 ############################
-### CUSTOM SUBCATEGORIES ###
-###########################
 
 # customsubcategory=110_secone=SecOne
 # customsubcategory=100_sectwo=SecTwo
