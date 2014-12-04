@@ -18,21 +18,23 @@ module.exports = function(grunt) {
           cleancss: true,
         },
         files: {
-          "../Public/Css/main.css": "Less/main.less"
+          "../Public/Css/main.min.css": "Less/main.less"
         }
       }
     },
     watch: {
       less: {
-        // We watch and compile less files as normal but don't live reload here
-        files: ['less/*.less'],
-        tasks: ['less:development'],
+        // Watch and compile less files
+        files: ['Less/*.less'],
+        tasks: ['less'],
       },
       livereload: {
-        // Here we watch the files the less task will compile to
-        // These files are sent to the live reload server after less compiles to them
-        options: { livereload: true },
-        files: ['/var/www/html/css/*.css', '/var/www/html/*.html'],
+        // Watch these files to live reload when changed
+        // *.html used for fluid templates doesn't work (yet).
+        files: ['../Public/Css/*.css', 'Layouts/DefaultLayout.html', 'Less/*.html', '*.html', '**/*.html'],
+        options: { 
+          livereload: true 
+        },
       },
     },
   });
