@@ -1,6 +1,10 @@
 page = PAGE
 page {
 
+    # Deactivating cache for development. 
+    # DON'T USE on production systems'
+    config.no_cache = 1
+
     # Page Properties
     config.doctype = html5
 
