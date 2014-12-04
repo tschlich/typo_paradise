@@ -12,6 +12,14 @@ page {
     meta.author = Thomas Schlich
     meta.description = TYPO3 6.2 Extension Typo Paradise
 
+    includeCSS {
+      screen = EXT:typo_paradise/Resources/Public/Css/main.css
+      screen {
+        title = display
+        media = screen
+      }
+    }
+
     10 = FLUIDTEMPLATE
     10 {
         file = EXT:typo_paradise/Resources/Private/Templates/DefaultTemplate.html
