@@ -1,4 +1,51 @@
-@bg-color: #EEE;
+@import "bootstrap.less";
+
+/*
+ * Custom Styles here
+ * keep in mind that bootstrap thinks mobile first 
+ * You can add styles restricted on one size only after the
+ * section "Large devices"
+ */
+
+/* Extra small devices and up (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
 body {
-  background: @bg-color;
+
+}
+/* Small devices and up (tablets) */
+@media (min-width: @screen-sm-min) {
+
+}
+
+/* Medium devices and up (desktops) */
+@media (min-width: @screen-md-min) {
+
+}
+
+/* Large devices and up (large desktops) */
+@media (min-width: @screen-lg-min) {
+
+}
+
+/*
+ * Styles restricted on one size
+ */
+/* Extra small devices only (phones) */
+@media (max-width: @screen-xs-max) {
+  
+}
+
+/* Small devices only (tablets) */
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+}
+
+/* Medium devices only (desktops) */
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
+}
+
+/* Large devices and up (large desktops) */
+@media (min-width: @screen-lg-min) {
+
 }
