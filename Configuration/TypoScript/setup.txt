@@ -1,3 +1,8 @@
+lib {
+    navigation = TEXT
+    navigation.value = Ich bin das Menü
+}
+
 page = PAGE
 page {
 
@@ -18,6 +23,10 @@ page {
         title = display
         media = screen
       }
+    }
+    includeJSFooter {
+      jquery = EXT:typo_paradise/Resources/Public/bower_components/jquery/dist/jquery.min.js
+      bootstrap = EXT:typo_paradise/Resources/Public/bower_components/bootstrap/dist/js/bootstrap.min.js
     }
 
     10 = FLUIDTEMPLATE
