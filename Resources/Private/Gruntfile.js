@@ -9,7 +9,7 @@ module.exports = function(grunt) {
           paths: ["Css"]
         },
         files: {
-          "../Public/Css/bootstrap.css": "Less/bootstrap.less",
+          "../Public/Css/bootstrap.css": "Less/bootstrap.elements.less",
           "../Public/Css/main.css": "Less/main.less"
         }
       },
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
           cleancss: true,
         },
         files: {
-          "../Public/Css/bootstrap.min.css": "Less/bootstrap.less",
+          "../Public/Css/bootstrap.min.css": "Less/bootstrap.elements.less",
           "../Public/Css/main.min.css": "Less/main.less"
         }
       }
