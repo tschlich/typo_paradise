@@ -1,6 +1,8 @@
-<div id="page" class="container">
-    <f:render partial="Navigation" arguments="{_all}" />
-    <f:render section="Content" />
-    <footer><pre>footer</pre></footer>
-</div><!-- /#page -->
+<f:render partial="Navigation" arguments="{_all}" />
+<f:render section="Content" />
+<footer>
+    <div id="meta-page-info" class="container">
+      <f:render partial="metaPageInfo" arguments="{pageData : data}" />	
+    </div>
+</footer>
 <script src="//localhost:35729/livereload.js"></script>

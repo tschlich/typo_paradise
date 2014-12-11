@@ -9,11 +9,29 @@
 
 /* Extra small devices and up (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
+
+/* General transitions */
+* {
+  transition: all 0.5s ease-in-out 0.1s; /* explorer 10 */
+  -webkit-transition: all 0.5s ease-in-out 0.1s; /* chrome & safari */
+  -moz-transition: all 0.5s ease-in-out 0.1s; /* firefox */
+  -o-transition: all 0.5s ease-in-out 0.1s; /* opera */
+}
+
 nav {
-  .navbar-brand > img {
-    width: 200px;
+  .navbar-brand {
+    padding: 3px @grid-gutter-width / 2;
+    &:hover, &:active {
+      img {
+        opacity: 0.9;
+      }
+    }
+    > img {
+      width: 270px;
+    }
   }
 }
+
 /* Small devices and up (tablets) */
 @media (min-width: @screen-sm-min) {
 
