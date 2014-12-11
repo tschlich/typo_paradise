@@ -1,4 +1,4 @@
-@import "bootstrap.less";
+@import "bootstrap.variables_and_mixins.less";
 
 /*
  * Custom Styles here
@@ -9,8 +9,10 @@
 
 /* Extra small devices and up (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
-body {
-
+nav {
+  .navbar-brand > img {
+    width: 200px;
+  }
 }
 /* Small devices and up (tablets) */
 @media (min-width: @screen-sm-min) {

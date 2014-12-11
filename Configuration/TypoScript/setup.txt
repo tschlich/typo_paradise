@@ -1,6 +1,14 @@
 lib {
-    navigation = TEXT
-    navigation.value = Ich bin das Menü
+
+  navigation = TEXT
+  navigation.value = Ich bin das Menü
+
+  /* @todo configure image as typoscriptObjectPath
+  logo = IMAGE
+  logo {
+    file = EXT:typo_paradise/Resources/Public/Images/LogoMotoclubWafna.png
+  }
+  */
 }
 
 page = PAGE
@@ -18,6 +26,12 @@ page {
     meta.description = TYPO3 6.2 Extension Typo Paradise
 
     includeCSS {
+      # @todo concatinate css and clean up here after development
+      bootstrap = EXT:typo_paradise/Resources/Public/Css/bootstrap.min.css
+      bootstrap {
+        title = display
+        media = screen
+      }
       screen = EXT:typo_paradise/Resources/Public/Css/main.css
       screen {
         title = display
