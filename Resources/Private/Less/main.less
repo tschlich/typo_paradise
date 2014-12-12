@@ -18,7 +18,13 @@
   -o-transition: all 0.5s ease-in-out 0.1s; /* opera */
 }
 
-nav {
+.navbar-inverse .navbar-nav > li > a {
+  background: @navbar-inverse-link-bg;
+  border-left: 1px rgba(40, 40, 40, 0.5) solid;
+  border-right: 1px rgba(70, 70, 70, 0.5) solid;
+}
+nav.navbar {
+  background-image: url("../Images/BlurBg.png");
   .navbar-brand {
     padding: 3px @grid-gutter-width / 2;
     &:hover, &:active {
@@ -28,6 +34,15 @@ nav {
     }
     > img {
       width: 270px;
+    }
+  }
+  .navbar-nav {
+    float: right;
+    > li > a:hover,
+    > li > a:active,
+    > .active > a {
+      border-left: 1px rgba(90, 90, 90, 0.5) solid;
+      border-right: 1px rgba(110, 110, 110, 0.5) solid;
     }
   }
 }
