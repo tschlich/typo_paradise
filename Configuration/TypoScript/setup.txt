@@ -1,7 +1,90 @@
 lib {
 
-  navigation = TEXT
-  navigation.value = Ich bin das Menü
+  navigation = HMENU
+  navigation {
+    special = directory
+    special.value = 2
+    1 = TMENU
+    1 {
+      wrap = <ul class="nav navbar-nav navbar-main">|</ul>
+      expAll = 1
+      noBlur = 1
+      NO = 1
+      NO {
+#        ATagTitle.field = abstract // description // title
+        ATagTitle.field = abstract // description // subtitle // title
+        ATagBeforeWrap = 1
+ #       linkWrap = |<span class="bar"></span>
+        wrapItemAndSub = <li>|</li>
+
+        wrapItemAndSub.override.cObject = COA
+        wrapItemAndSub.override.cObject {
+          if {
+            value = 4
+            equals.field = doktype
+            isTrue = 1
+            isTrue.if {
+              value.data = TSFE:page|uid
+              equals.field = shortcut
+            }
+          }
+
+          10 = TEXT
+          10.value = <li class="active">|</li>
+        }
+
+      }
+
+      ACT < .NO
+      ACT {
+        wrapItemAndSub = <li class="active">|</li>
+      }
+
+      CUR < .ACT
+      CUR {
+        wrapItemAndSub = <li class="active current">|</li>
+      }
+
+      IFSUB < .NO
+      IFSUB {
+        doNotLinkIt = 1
+        #@todo use other tag for node pages
+        allWrap = <a href="#" class="dropdown-toggle" data-toggle="dropdown">|<b class="caret"></b></a>
+        wrapItemAndSub = <li class="dropdown">|</li>
+      }
+
+      ACTIFSUB < .IFSUB
+      ACTIFSUB {
+        wrapItemAndSub = <li class="active dropdown">|</li>
+      }
+
+      # @todo doesn't make sense as long as there are no contents on node pages?
+      CURIFSUB < .ACTIFSUB
+    }
+
+    2 < .1
+    2 {
+      wrap = <ul class="dropdown-menu">|</ul>
+      SPC = 1
+      SPC {
+              wrapItemAndSub = <li class="divider"></li><li class="dropdown-header">|</li>
+      }
+
+/*
+      IFSUB >
+      ACTIFSUB >
+      CURIFSUB >
+*/
+    }
+
+    3 < .2
+    4 < .3
+    5 < .4
+    6 < .5
+
+
+  }
+
 
   /* @todo configure image as typoscriptObjectPath
   logo = IMAGE
@@ -15,7 +98,7 @@ page = PAGE
 page {
 
     # Deactivating cache for development. 
-    # DON'T USE on production systems'
+    # DON'T USE on production systems
     config.no_cache = 1
 
     # Page Properties
