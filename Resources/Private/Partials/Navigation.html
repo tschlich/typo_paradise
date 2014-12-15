@@ -1,22 +1,27 @@
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
   <div class="container">
-    <div class="navbar-header">
-
+    <div class="row">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-
-      <f:link.page pageUid="3" class="navbar-brand navbar-brand-image" title="{siteName}Home">
-        <img src="{f:uri.image(src: 'EXT:typo_paradise/Resources/Public/Images/LogoMotoclubWafna.svg')}" alt="Motoclub Wafna Logo" />
-      </f:link.page>
-
+      <div id="logo" class="col-xs-9 col-sm-5 col-md-4 col-lg-3">
+        <div class="test">
+          <f:link.page pageUid="3" title="{siteName}Home">
+            <img src="{f:uri.image(src: 'EXT:typo_paradise/Resources/Public/Images/LogoMotoclubWafna.svg')}" alt="Motoclub Wafna Logo" />
+          </f:link.page>
+        </div>
+      </div>
+      <div id="mainNavigation" class="col-xs-12 col-md-8 col-lg-9">
+        <div class="test">
+          <ul>
+            <f:cObject typoscriptObjectPath="lib.navigation" />
+          </ul>
+        </div>
+      </div>
     </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <f:cObject typoscriptObjectPath="lib.navigation" />
-    </div><!--/.nav-collapse -->
   </div>
 </nav>
 
