@@ -2,13 +2,6 @@
   <div class="container">
     <div class="row">
 
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
       <div id="logo" class="col-xs-6 col-sm-4 col-md-3">
         <f:link.page pageUid="3" title="Home">
           <img src="{f:uri.image(src: 'EXT:typo_paradise/Resources/Public/Images/LogoMotoclubWafna.svg')}" alt="Motoclub Wafna Logo" />
@@ -16,6 +9,13 @@
       </div>
 
       <div id="mainNavigation" class="col-xs-12 col-md-9">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
         <f:cObject typoscriptObjectPath="lib.navigation" />
       </div>
 
