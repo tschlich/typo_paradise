@@ -15,8 +15,26 @@ html {
   height: 101%;
 }
 body {
-  //background-image: url('../Images/BlurBgSand.png');
 }
+
+#grid-marker {
+  background: deeppink url("../Images/grid-marker.png") 0 0 no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999999;
+}
+.grid-marker div div {
+  background-color: deeppink;
+  border-bottom: 1px black solid;
+  color: @gray-lighter;
+  text-align: center;
+  color: white;
+}
+
+
 .navbar-inverse .navbar-nav > li > a {
   background: @navbar-inverse-link-bg;
 //  border-left: 1px rgba(40, 40, 40, 0.5) solid;
@@ -25,11 +43,13 @@ body {
 nav.navbar {
   background: @navbar-inverse-bg url("../Images/BlurBg.png") bottom ;
   border: 0;
+  > div.container > div.row {
+    position: relative;
+  }
 }
 #logo {
   img {
-    width: 100%;
-    min-width: 200px;
+    width: 230px;
     &:hover, 
     &:active {
       opacity: 0.9;
@@ -38,11 +58,28 @@ nav.navbar {
 }
 
 #mainNavigation {
+  position: absolute;
+  left: 0;
+  top: 0;
+  button {
+    position: absolute;
+    right: 0;
+    top: 21px;
+  }
+
   ul {
     padding: 0;
-    margin: 0;
-    width: 100%;
-    display: table;
+  }
+  > ul {
+  }
+  
+  ul {
+    display: block;
+    margin: 0 -(@grid-gutter-width / 4);
+    width: auto;
+    height: 0;
+    overflow: hidden;
+//    display: none;
 /*
     .menu-item-border-left(@opacity: 0.6);
     border-left-width: 1px;
@@ -50,59 +87,114 @@ nav.navbar {
     border-right-width: 2px;
  */
     li { 
-      display: none;
+      display: block;
+      background-color: rgba(0,0,0,0.85);
+      overflow: hidden;
       a {
+        padding: @grid-gutter-width / 4 @grid-gutter-width / 2;
+        margin: @grid-gutter-width / 4 ;
         display: block;
         text-align: left;
+        color: @navbar-inverse-link-color;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9); 
+        background: rgba(0,0,0,0.2);
+//        .border-top(1px, rgba(0,0,0,0.8));
+        .border-right(5px, @gray);
+//        .border-bottom(1px, @gray);
+        .border-left(5px, @gray);
+        &:hover,
+        &:active {
+          text-decoration: none;
+        }
+        &:hover {
+          color: @navbar-inverse-link-hover-color;
+          background-color: @navbar-inverse-link-hover-bg;
+        }
+        &:active {
+          color: @navbar-inverse-link-active-color;
+          background-color: @navbar-inverse-link-active-bg;
+        }
+      }
+      &:hover > a,
+      &.active > a,
+      &.current > a {
+        color: @brand-primary;
+//        .border-top(1px, @brand-primary);
+        .border-right(5px, @brand-primary);
+//        .border-bottom(1px, @brand-primary);
+        .border-left(5px, @brand-primary);
+      }
+      &:hover > a {
+//        .border-top(1px, @brand-primary);
+        .border-right(5px, @gray);
+//        .border-bottom(1px, @brand-primary);
+        .border-left(5px, @gray);
       }
       &.lvl1 {
-        display: table-cell;
-        width: 16.66666%;
+//        display: table-cell;
+//        width: 16.66666%;
         position: relative;
-//        background: rgba(20,20,20,0.3);
         > a {
-          padding: 22px 0;
-          text-align: center;
+          text-align: left;
 //          .menu-item-border-left(@opacity: 0.3);
 //          .menu-item-border-right(@opacity: 0.6);
         }
       }
-      &:hover > ul > li {
-        display: block;
+      &:hover > ul {
+        height: auto;
+        max-height: auto;
+        overflow: visible;
+//        padding-top: @navbar-height;
       }
     }
     ul {
+      height: 0;
+      max-height: 0;
       display: block;
-      position: absolute;
+   //    max-height: 0;
+      overflow: hidden;
+    //  position: absolute;
     }
+  }
+
+  button:hover + ul,
+  button:active + ul,
+  ul:hover {
+    height: auto;
+    margin-top: @navbar-height;
+    .box-shadow(2px 5px 4px rgba(0,0,0,0.3));
   }
 }
 
-.test div div {
-  background: #333;
-  color: @gray-lighter;
-  text-align: center;
-}
-
-
 /* Small devices and up (tablets) */
 @media (min-width: @screen-sm-min) {
-  body { background: Cornsilk; }
+  #grid-marker {
+    background-color: green;
+    background-position: 0 -20px;
+  }
 }
 
 /* Medium devices and up (desktops) */
 @media (min-width: @screen-md-min) {
-  body { background: LightCyan; }
+  #grid-marker {
+    background-color: yellow;
+    background-position: 0 -40px;
+  }
+/*
   #mainNavigation {
     > ul {
       margin-top: 35px;
     }
-  }  
+  }
+*/
 }
 
 /* Large devices and up (large desktops) */
 @media (min-width: @screen-lg-min) {
-  body { background: LightBlue; }
+  #grid-marker {
+    background-color: red;
+    background-position: 0 -60px;
+  }
 }
 
 /*

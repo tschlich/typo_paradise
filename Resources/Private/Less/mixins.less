@@ -1,9 +1,15 @@
 // Custom Mixins
 // --------------------------------------------------
 
-.menu-item-border-left(@opacity: 0.2) {
-    border-left: solid 2px rgba(100, 100, 100, @opacity);
+.border-top( @width-top: 1px , @color-top: black, @style-top: solid ) {
+    border-top: @width-top @color-top @style-top;
 }
-.menu-item-border-right(@opacity: 0.2) {
-    border-right: solid 1px rgba(100, 100, 100, @opacity);
+.border-right( @width-right: 1px , @color-right: black, @style-right: solid ) {
+    border-right: @width-right @color-right @style-right;
+}
+.border-bottom( @width-bottom: 1px , @color-bottom: black, @style-bottom: solid ) {
+    border-bottom: @width-bottom @color-bottom @style-bottom;
+}
+.border-left( @width-left: 1px , @color-left: black, @style-left: solid ) {
+    border-left: @width-left @color-left @style-left;
 }
