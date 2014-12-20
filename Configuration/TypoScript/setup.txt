@@ -17,6 +17,14 @@ lib {
  #       linkWrap = |<span class="bar"></span>
         wrapItemAndSub = <li class="lvl1">|</li>
       }
+      ACT < .1
+      ACT = 1
+      ACT.wrapItemAndSub = <li class="lvl1 active">|</li>
+      
+      CUR < .1
+      CUR = 1
+      CUR.wrapItemAndSub = <li class="lvl1 current">|</li>
+      
     }
 
     2 < .1
