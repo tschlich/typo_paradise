@@ -5,11 +5,14 @@
 /* Extra small devices and up (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 /* General transitions */
-* {
+*aa{
   transition: all 0.5s ease-in-out 0.1s; /* explorer 10 */
   -webkit-transition: all 0.5s ease-in-out 0.1s; /* chrome & safari */
   -moz-transition: all 0.5s ease-in-out 0.1s; /* firefox */
   -o-transition: all 0.5s ease-in-out 0.1s; /* opera */
+}
+#mainNavigation ul {
+  .transition(1s , 0.5s , linear );
 }
 html {
   height: 101%;
@@ -61,23 +64,20 @@ nav.navbar {
   position: absolute;
   left: 0;
   top: 0;
-  button {
+  div.wrap {
     position: absolute;
+    width: 100px;
+    height: 100px;
     right: 0;
     top: 21px;
   }
 
   ul {
-    padding: 0;
-  }
-  > ul {
-  }
-  
-  ul {
     display: block;
-    margin: 0 -(@grid-gutter-width / 4);
+    margin: @navbar-height -(@grid-gutter-width / 4) 0 -(@grid-gutter-width / 4);
+    max-height: 0;
+    padding: 0;
     width: auto;
-    height: 0;
     overflow: hidden;
 //    display: none;
 /*
@@ -141,27 +141,28 @@ nav.navbar {
         }
       }
       &:hover > ul {
-        height: auto;
-        max-height: auto;
+        max-height: 10000px;
         overflow: visible;
 //        padding-top: @navbar-height;
       }
     }
     ul {
-      height: 0;
-      max-height: 0;
       display: block;
-   //    max-height: 0;
+      margin: 0 -(@grid-gutter-width / 4);
+    //    max-height: 0;
       overflow: hidden;
     //  position: absolute;
     }
   }
+  
+  > ul {
+    max-height: 5000px;
+  }
 
-  button:hover + ul,
-  button:active + ul,
+  div.wrap:hover + ul,
+  div.wrap:active + ul,
   ul:hover {
-    height: auto;
-    margin-top: @navbar-height;
+    max-height: 5000px;
     .box-shadow(2px 5px 4px rgba(0,0,0,0.3));
   }
 }

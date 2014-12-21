@@ -2,14 +2,20 @@
 // --------------------------------------------------
 
 .border-top( @width-top: 1px , @color-top: black, @style-top: solid ) {
-    border-top: @width-top @color-top @style-top;
+  border-top: @width-top @color-top @style-top;
 }
 .border-right( @width-right: 1px , @color-right: black, @style-right: solid ) {
-    border-right: @width-right @color-right @style-right;
+  border-right: @width-right @color-right @style-right;
 }
 .border-bottom( @width-bottom: 1px , @color-bottom: black, @style-bottom: solid ) {
-    border-bottom: @width-bottom @color-bottom @style-bottom;
+  border-bottom: @width-bottom @color-bottom @style-bottom;
 }
 .border-left( @width-left: 1px , @color-left: black, @style-left: solid ) {
-    border-left: @width-left @color-left @style-left;
+  border-left: @width-left @color-left @style-left;
+}
+.transition( @duration: 0 , @delay: 0 , @timing-function: ease , @property: all ){
+  transition:         @property @duration @timing-function @delay; /* explorer 10 */
+  -webkit-transition: @property @duration @timing-function @delay ; /* chrome & safari */
+  -moz-transition:    @property @duration @timing-function @delay ; /* firefox */
+  -o-transition:      @property @duration @timing-function @delay ; /* opera */
 }
