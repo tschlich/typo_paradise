@@ -1,222 +1,42 @@
 @import "bootstrap.variables_and_mixins.less";
+@import "header.less";
+@import "helper.less";
 
 /* Custom Styles here. Keep in mind that bootstrap thinks mobile first */
 
-/* Extra small devices and up (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+/* 
+ * Extra small devices and up (phones, less than 768px)
+ * No media query as this is the default in Bootstrap 
+ */
+
 /* General transitions */
-*aa{
-  transition: all 0.5s ease-in-out 0.1s; /* explorer 10 */
-  -webkit-transition: all 0.5s ease-in-out 0.1s; /* chrome & safari */
-  -moz-transition: all 0.5s ease-in-out 0.1s; /* firefox */
-  -o-transition: all 0.5s ease-in-out 0.1s; /* opera */
+a {
+  transition: all 0.5s ease-in-out 0.1s;         // explorer 10
+  -webkit-transition: all 0.5s ease-in-out 0.1s; // chrome & safari
+  -moz-transition: all 0.5s ease-in-out 0.1s;    // firefox
+  -o-transition: all 0.5s ease-in-out 0.1s;      // opera
 }
-#mainNavigation ul {
-  .transition(1s , 0.5s , linear );
-}
+
 html {
   height: 101%;
 }
-body {
-}
 
-#grid-marker {
-  background: deeppink url("../Images/grid-marker.png") 0 0 no-repeat;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 9999999;
-}
-.grid-marker div div {
-  background-color: deeppink;
-  border-bottom: 1px black solid;
-  color: @gray-lighter;
-  text-align: center;
-  color: white;
-}
-
-
-.navbar-inverse .navbar-nav > li > a {
-  background: @navbar-inverse-link-bg;
-//  border-left: 1px rgba(40, 40, 40, 0.5) solid;
-//  border-right: 1px rgba(70, 70, 70, 0.5) solid;
-}
-nav.navbar {
-  background: @navbar-inverse-bg url("../Images/BlurBg.png") bottom ;
-  border: 0;
-  > div.container > div.row {
-    position: relative;
-  }
-}
-#logo {
-  img {
-    width: 230px;
-    &:hover, 
-    &:active {
-      opacity: 0.9;
-    }
-  }
-}
-
-#mainNavigation {
-  position: absolute;
-  left: 0;
-  top: 0;
-  div.wrap {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    right: 0;
-    top: 21px;
-  }
-
-  ul {
-    display: block;
-    margin: @navbar-height -(@grid-gutter-width / 4) 0 -(@grid-gutter-width / 4);
-    max-height: 0;
-    padding: 0;
-    width: auto;
-    overflow: hidden;
-//    display: none;
-/*
-    .menu-item-border-left(@opacity: 0.6);
-    border-left-width: 1px;
-    .menu-item-border-right(@opacity: 0.3);
-    border-right-width: 2px;
- */
-    li { 
-      display: block;
-      background-color: rgba(0,0,0,0.85);
-      overflow: hidden;
-      a {
-        padding: @grid-gutter-width / 4 @grid-gutter-width / 2;
-        margin: @grid-gutter-width / 4 ;
-        display: block;
-        text-align: left;
-        color: @navbar-inverse-link-color;
-        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9); 
-        background: rgba(0,0,0,0.2);
-//        .border-top(1px, rgba(0,0,0,0.8));
-        .border-right(5px, @gray);
-//        .border-bottom(1px, @gray);
-        .border-left(5px, @gray);
-        &:hover,
-        &:active {
-          text-decoration: none;
-        }
-        &:hover {
-          color: @navbar-inverse-link-hover-color;
-          background-color: @navbar-inverse-link-hover-bg;
-        }
-        &:active {
-          color: @navbar-inverse-link-active-color;
-          background-color: @navbar-inverse-link-active-bg;
-        }
-      }
-      &:hover > a,
-      &.active > a,
-      &.current > a {
-        color: @brand-primary;
-//        .border-top(1px, @brand-primary);
-        .border-right(5px, @brand-primary);
-//        .border-bottom(1px, @brand-primary);
-        .border-left(5px, @brand-primary);
-      }
-      &:hover > a {
-//        .border-top(1px, @brand-primary);
-        .border-right(5px, @gray);
-//        .border-bottom(1px, @brand-primary);
-        .border-left(5px, @gray);
-      }
-      &.lvl1 {
-//        display: table-cell;
-//        width: 16.66666%;
-        position: relative;
-        > a {
-          text-align: left;
-//          .menu-item-border-left(@opacity: 0.3);
-//          .menu-item-border-right(@opacity: 0.6);
-        }
-      }
-      &:hover > ul {
-        max-height: 10000px;
-        overflow: visible;
-//        padding-top: @navbar-height;
-      }
-    }
-    ul {
-      display: block;
-      margin: 0 -(@grid-gutter-width / 4);
-    //    max-height: 0;
-      overflow: hidden;
-    //  position: absolute;
-    }
-  }
-  
-  > ul {
-    max-height: 5000px;
-  }
-
-  div.wrap:hover + ul,
-  div.wrap:active + ul,
-  ul:hover {
-    max-height: 5000px;
-    .box-shadow(2px 5px 4px rgba(0,0,0,0.3));
-  }
-}
 
 /* Small devices and up (tablets) */
-@media (min-width: @screen-sm-min) {
-  #grid-marker {
-    background-color: green;
-    background-position: 0 -20px;
-  }
-}
+@media (min-width: @screen-sm-min) {}
 
 /* Medium devices and up (desktops) */
-@media (min-width: @screen-md-min) {
-  #grid-marker {
-    background-color: yellow;
-    background-position: 0 -40px;
-  }
-/*
-  #mainNavigation {
-    > ul {
-      margin-top: 35px;
-    }
-  }
-*/
-}
+@media (min-width: @screen-md-min) {}
 
 /* Large devices and up (large desktops) */
-@media (min-width: @screen-lg-min) {
-  #grid-marker {
-    background-color: red;
-    background-position: 0 -60px;
-  }
-}
+@media (min-width: @screen-lg-min) {}
 
-/*
- * Styles restricted on one size
- */
+/* --- Styles restricted on one size ---------------------------------------- */
 /* Extra small devices only (phones) */
-@media (max-width: @screen-xs-max) {
-  
-}
-
+@media (max-width: @screen-xs-max) {}
 /* Small devices only (tablets) */
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-
-}
-
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {}
 /* Medium devices only (desktops) */
-@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-
-}
-
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {}
 /* Large devices and up (large desktops) */
-@media (min-width: @screen-lg-min) {
-
-}
+@media (min-width: @screen-lg-min) {}

@@ -1,0 +1,56 @@
+/* Helper styles - should be deactivated in production */
+
+/* 
+ * Extra small devices and up (phones, less than 768px)
+ * No media query as this is the default in Bootstrap 
+ */
+#grid-marker {
+  background: deeppink url("../Images/grid-marker.png") 0 0 no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999999;
+}
+.grid-marker div div {
+  background-color: deeppink;
+  border-bottom: 1px black solid;
+  color: @gray-lighter;
+  text-align: center;
+  color: white;
+}
+
+/* Small devices and up (tablets) */
+@media (min-width: @screen-sm-min) {
+  #grid-marker {
+    background-color: green;
+    background-position: 0 -20px;
+  }
+}
+
+/* Medium devices and up (desktops) */
+@media (min-width: @screen-md-min) {
+  #grid-marker {
+    background-color: yellow;
+    background-position: 0 -40px;
+  }
+}
+
+/* Large devices and up (large desktops) */
+@media (min-width: @screen-lg-min) {
+  #grid-marker {
+    background-color: red;
+    background-position: 0 -60px;
+  }
+}
+
+/* --- Styles restricted on one size ---------------------------------------- */
+/* Extra small devices only (phones) */
+@media (max-width: @screen-xs-max) {}
+/* Small devices only (tablets) */
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {}
+/* Medium devices only (desktops) */
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {}
+/* Large devices and up (large desktops) */
+@media (min-width: @screen-lg-min) {}
