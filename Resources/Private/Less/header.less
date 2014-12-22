@@ -4,6 +4,7 @@
 
 nav.navbar {
   background: @navbar-inverse-bg url("../Images/BlurBg.png") bottom ;
+  margin-bottom: @grid-gutter-width / 2;
   > div.container > div.row {
     position: relative;
   }
@@ -140,7 +141,7 @@ nav.navbar {
       > li {
         display: table-cell;
         border: none;
-        a {
+        > a {
           background: rgba(0, 0, 0, 0.4);
           text-align: center;
           padding: 21px 5px;
@@ -158,10 +159,9 @@ nav.navbar {
               padding: 2px 20px !important;
               text-align: left;
               white-space: nowrap;
-              background: @navbar-inverse-link-bg;
             }
-            &:last-child {
-              margin-bottom: 15px !important;
+            &:last-child > a {
+              border-bottom: 5px @navbar-inverse-link-bg solid;
             }
             ul {
               left: 99%;
@@ -173,8 +173,9 @@ nav.navbar {
         &:hover a {
           background: rgba(255,255,255, 0.1);
         }
-        &:hover ul li a {
-          background: @navbar-inverse-link-bg;
+        &:hover ul li {
+          a { background: @navbar-inverse-link-bg; }
+          &.current a { background: @brand-primary; }
         }
 
         &:last-child ul {

@@ -20,10 +20,33 @@
 html {
   height: 101%;
 }
-
+body > div > ul.breadcrumbs {
+  display: none;
+}
+body > footer {
+  margin-top: @grid-gutter-width;
+  background: @navbar-inverse-bg url("../Images/BlurBg.png") bottom ;
+  color: white;
+  padding: 10px 0;
+}
 
 /* Small devices and up (tablets) */
-@media (min-width: @screen-sm-min) {}
+@media (min-width: @screen-sm-min) {
+  body > div > ul.breadcrumbs {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+    li {
+      display: inline-block;
+      a {
+        color: @gray-light;
+        padding: 5px ;
+        
+      }
+    }
+  }
+}
 
 /* Medium devices and up (desktops) */
 @media (min-width: @screen-md-min) {}
