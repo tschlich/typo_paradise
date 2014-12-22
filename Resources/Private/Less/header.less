@@ -1,5 +1,5 @@
-#mainNavigation ul {
-  .transition(1s , 0.5s , linear );
+#mainNavigation .asterisk {
+  .transition(0.5s , 0.1s , ease-in-out);
 }
 
 nav.navbar {
@@ -36,7 +36,6 @@ nav.navbar {
   /* All Levels */
   ul {
     display: block;
-    max-height: 0;
     padding: 0;
     width: auto;
     overflow: hidden;
@@ -152,7 +151,7 @@ nav.navbar {
         }
         ul {
           position: absolute;
-          .box-shadow(none);
+          max-height: 0;
           li {
             position: relative;
             a {
