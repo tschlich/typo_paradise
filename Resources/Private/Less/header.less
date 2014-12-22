@@ -4,7 +4,6 @@
 
 nav.navbar {
   background: @navbar-inverse-bg url("../Images/BlurBg.png") bottom ;
-  border: 0;
   > div.container > div.row {
     position: relative;
   }
@@ -41,9 +40,9 @@ nav.navbar {
     padding: 0;
     width: auto;
     overflow: hidden;
-    li { 
+    li {
       display: block;
-      overflow: hidden;
+      position: relative;
       a {
         display: block;
         text-align: left;
@@ -76,15 +75,12 @@ nav.navbar {
         overflow: visible;
       }
     }
-    ul {
-      display: block;
-      overflow: hidden;
-    }
   }
 
   div.wrap:hover + ul,
   div.wrap:active + ul,
   > ul:hover {
+    overflow: visible;
     max-height: 5000px;
   }
 
@@ -133,6 +129,59 @@ nav.navbar {
 
 /* Medium devices and up (desktops) */
 @media (min-width: @screen-md-min) {
+  #mainNavigation {
+    position: relative;
+    top: 38px;
+    > ul {
+      display: table;
+      width: 100%;
+      margin: 0;
+      .box-shadow(none);
+      background: none;
+      > li {
+        display: table-cell;
+        border: none;
+        a {
+          background: rgba(0, 0, 0, 0.4);
+          text-align: center;
+          padding: 21px 5px;
+          margin-left: 2px;
+        }
+        &:first-child a {
+          margin-left: 0;
+        }
+        ul {
+          position: absolute;
+          .box-shadow(none);
+          li {
+            position: relative;
+            a {
+              padding: 2px 20px !important;
+              text-align: left;
+              white-space: nowrap;
+              background: @navbar-inverse-link-bg;
+            }
+            &:last-child {
+              margin-bottom: 15px !important;
+            }
+            ul {
+              left: 99%;
+              top: 0;
+            }
+          }
+        }
+
+        &:last-child ul {
+          left: auto;
+          right: 0;
+          li ul {
+            left: auto;
+            right: 98%;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* Large devices and up (large desktops) */
