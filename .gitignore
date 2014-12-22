@@ -1,5 +1,7 @@
 bower_components/
 node_modules/
+**/Css/bootstrap.css
+**/Css/bootstrap.min.css
 **/Css/main.css
 **/Css/main.min.css
 Documentation.tmpl
