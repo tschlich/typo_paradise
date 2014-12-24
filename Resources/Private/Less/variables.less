@@ -46,14 +46,24 @@
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
+@font-face {
+  font-family: Exo;
+  src: url("../Fonts/exo/Exo-Regular.otf") format("opentype");
+}
 
-@font-family-sans-serif:  Arial, sans-serif, "Helvetica Neue", Helvetica;
+@font-face {
+  font-family: Exo;
+  font-weight: bold;
+  src: url("../Fonts/exo/Exo-Bold.otf") format("opentype");
+}
+
+@font-family-sans-serif:  Exo, Arial, sans-serif, "Helvetica Neue", Helvetica;
 //@font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 //@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-//@font-size-base:          14px;
+@font-size-base:          14px;
 //@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 //@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
@@ -71,7 +81,7 @@
 
 //** By default, this inherits from the `<body>`.
 //@headings-font-family:    inherit;
-//@headings-font-weight:    500;
+@headings-font-weight:    normal;
 //@headings-line-height:    1.1;
 //@headings-color:          inherit;
 
@@ -860,4 +870,4 @@
 //** Width of horizontal description list titles
 //@dl-horizontal-offset:        @component-offset-horizontal;
 //** Horizontal line color.
-//@hr-border:                   @gray-lighter;
+@hr-border:                   @gray;

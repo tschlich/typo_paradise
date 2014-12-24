@@ -1,12 +1,16 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-sm-4">
-        col-sm-4
+      <div id="metaNavigation" class="col-xs-12 col-sm-8">
+        <f:cObject typoscriptObjectPath="lib.metaNavigation" />
       </div>
-      <div class="col-sm-8">
+      <div id="pageInfo" class="col-xs-12 col-sm-4">
         Page {pageData.uid} created on: <f:format.date format="d.m.Y - H:i:s">@{pageData.crdate}</f:format.date>
       </div>
+    </div>
+    <hr>
+    <div id="sitemap" class="row">
+      <f:cObject typoscriptObjectPath="lib.sitemap" />
     </div>
   </div>
 </footer>

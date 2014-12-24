@@ -10,24 +10,66 @@
  */
 
 /* General transitions */
-.asterisk {
-  transition: all 0.5s ease-in-out 0.1s;         // explorer 10
-  -webkit-transition: all 0.5s ease-in-out 0.1s; // chrome & safari
-  -moz-transition: all 0.5s ease-in-out 0.1s;    // firefox
-  -o-transition: all 0.5s ease-in-out 0.1s;      // opera
+* {
+  .transition( @duration: 0.4s , @delay: 0s , @timing-function: ease-in , @property: all );
 }
 
 html {
   height: 101%;
+  font-size: @font-size-base;
 }
+
+#jumbotron {
+  background: @brand-primary;
+  margin-top: -@grid-gutter-width;
+  padding-top: 1.5rem;
+  padding-bottom: 1.4rem;
+  h1, h2, h3 {
+    font-weight: bold; 
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+}
+
 body > div > ul.breadcrumbs {
   display: none;
 }
 body > footer {
   margin-top: @grid-gutter-width;
-  background: @navbar-inverse-bg url("../Images/BlurBg.png") bottom ;
+  background: @navbar-inverse-bg;
   color: white;
   padding: 10px 0;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  #metaNavigation {
+    li {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+  }
+  hr {
+    border-top: 1px @hr-border solid ;
+  }
+  #sitemap > ul {
+    > li {
+      margin-bottom: @grid-gutter-width;
+      
+      a:hover,
+      &.current > a {
+        text-decoration: underline;
+      }
+    }
+    ul {
+      padding-left: 1rem;
+    }
+  }
+  #pageInfo {
+    text-align: right;
+    font-size: 0.8rem;
+  }
 }
 
 /* Small devices and up (tablets) */

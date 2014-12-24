@@ -19,8 +19,8 @@ lib {
     }
   }
 
-  navigation = HMENU
-  navigation {
+  mainNavigation = HMENU
+  mainNavigation {
     special = directory
     special.value = 2
     1 = TMENU
@@ -54,6 +54,49 @@ lib {
     4.NO.wrapItemAndSub = <li class="lvl4">|</li>
     5 < .1
     5.NO.wrapItemAndSub = <li class="lvl5">|</li>
+  }
+
+  metaNavigation < .mainNavigation
+  metaNavigation {
+    special = directory
+    special.value = 5
+    1 = TMENU
+    1 {
+      wrap = <ul>|</ul>
+      expAll = 1
+      noBlur = 1
+      NO = 1
+      NO {
+        ATagTitle.field = abstract // description // subtitle // title
+        ATagBeforeWrap = 1
+ #       linkWrap = |<span class="bar"></span>
+        wrapItemAndSub = <li class="lvl1">|</li>
+      }
+      
+      ACT >
+
+      CUR < .1
+      CUR = 1
+      CUR.wrapItemAndSub = <li class="lvl1 current">|</li>
+      
+    }
+  }
+
+  sitemap < .mainNavigation
+  sitemap {
+    1 {
+      wrap = <ul>|</ul>
+      NO = 1
+      NO {
+        wrapItemAndSub = <li class="lvl1 col-xs-12 col-sm-4 col-md-3 col-lg-2">|</li>
+      }
+
+      ACT >
+
+      CUR < .1
+      CUR = 1
+      CUR.wrapItemAndSub = <li class="lvl1 current col-xs-12 col-sm-4 col-md-3 col-lg-2">|</li>
+    }
   }
 }
 

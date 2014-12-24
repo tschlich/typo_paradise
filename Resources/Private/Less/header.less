@@ -96,10 +96,9 @@ nav.navbar {
       &:first-child {
         .border-top(0);
       }
-      &:last-child {
-        .border-bottom(0);
-      }
-      a {
+      > a {
+        font-size: 1.3rem;
+        text-transform: uppercase;
         padding: @grid-gutter-width / 4 @grid-gutter-width / 2;
       }
       > ul {
@@ -131,7 +130,7 @@ nav.navbar {
 @media (min-width: @screen-md-min) {
   #mainNavigation {
     position: relative;
-    top: 38px;
+    top: 42px;
     > ul {
       display: table;
       width: 100%;
@@ -144,7 +143,7 @@ nav.navbar {
         > a {
           background: rgba(0, 0, 0, 0.4);
           text-align: center;
-          padding: 21px 5px;
+          padding: 15px 5px;
           margin-left: 2px;
         }
         &:first-child a {
@@ -153,12 +152,14 @@ nav.navbar {
         ul {
           position: absolute;
           max-height: 0;
+          margin-left: 2px;
           li {
             position: relative;
             a {
-              padding: 2px 20px !important;
+              padding: 2px 14px !important;
               text-align: left;
               white-space: nowrap;
+              border-top: 1px @gray-darker solid ;
             }
             &:last-child > a {
               border-bottom: 5px @navbar-inverse-link-bg solid;
@@ -174,7 +175,13 @@ nav.navbar {
           background: rgba(255,255,255, 0.1);
         }
         &:hover ul li {
-          a { background: @navbar-inverse-link-bg; }
+          &:hover,
+          a:hover {
+            border-top-color: @brand-primary ;
+          }
+          a {
+            background: @navbar-inverse-link-bg; 
+          }
           &.current a { background: @brand-primary; }
         }
 

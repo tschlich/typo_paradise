@@ -1,6 +1,10 @@
 <f:layout name="DefaultLayout" />
 <f:section name="Content">
+  <div id="jumbotron">
+    <f:format.raw>{jumbotron}</f:format.raw>
+  </div>
   <div class="container">
+    <f:format.raw>{breadcrumbs}</f:format.raw>
     <div id="main-content">
       <f:format.raw>{mainContent}</f:format.raw>
     </div>
@@ -10,8 +14,5 @@
     <aside id="sidebar">
       <f:format.raw>{sidebar}</f:format.raw>
     </aside>
-    <div id="jumbotron">
-      <f:format.raw>{jumbotron}</f:format.raw>
-    </div>
   </div>
 </f:section>
