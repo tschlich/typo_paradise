@@ -1,12 +1,12 @@
 typo_paradise
 =============
 
-This is a Extension for TYPO3 6.2 for building web projects based 
-on Twitter Bootstrap responsive Framework, Bower web package manager 
+Typo Paradise is a extension for building TYPO3 6.2 web projects based 
+on Twitter Bootstrap responsive framework, Bower web package manager 
 and Grunt task runner.
 
 The extension is tested with [typo3machine](https://github.com/tschlich/typo3machine), 
-a Vagrant VM including everything you need to run or try the Extension.
+a Vagrant VM including everything you need to run or try this Extension.
 
 ## How to use
 
@@ -15,7 +15,5 @@ a Vagrant VM including everything you need to run or try the Extension.
 3. Go to console (vagrant ssh, or whatever)
 4. Navigate to private resources folder and run grunt task to compile less files
 
-       cd /var/www/html/typo3conf/ext/typo_paradise/Resources/Private
-       grunt less:development
-
-5. @todo grunt watch
+        cd /var/www/html/typo3conf/ext/typo_paradise/Resources/Private
+        grunt less:development
